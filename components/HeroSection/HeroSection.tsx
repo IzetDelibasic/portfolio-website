@@ -1,25 +1,56 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { profileImage } from "@/constants/imagesConstant";
 
 const HeroSection = () => {
   const [currentParagraph, setCurrentParagraph] = useState(0);
-  const paragraphs = [
-    "Third-year software engineering student",
-    "Aspiring to become a frontend developer",
-    "Currently working with React and Next.js",
-  ];
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(100);
+
+  const paragraphs = useMemo(
+    () => [
+      "Third-year software engineering student",
+      "Aspiring to become a frontend developer",
+      "Currently working with React and Next.js",
+    ],
+    []
+  );
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentParagraph((prev) => (prev + 1) % paragraphs.length);
-    }, 2000);
+    const handleTyping = () => {
+      const currentText = paragraphs[currentParagraph];
 
-    return () => clearInterval(timer);
-  }, []);
+      if (!isDeleting && charIndex < currentText.length) {
+        // Typing
+        setDisplayedText((prev) => prev + currentText.charAt(charIndex));
+        setCharIndex((prev) => prev + 1);
+        setTypingSpeed(100);
+      } else if (isDeleting && charIndex > 0) {
+        // Deleting
+        setDisplayedText((prev) => prev.substring(0, prev.length - 1));
+        setCharIndex((prev) => prev - 1);
+        setTypingSpeed(50);
+      } else if (!isDeleting && charIndex === currentText.length) {
+        // Pause
+        setIsDeleting(true);
+        setTypingSpeed(1000);
+      } else if (isDeleting && charIndex === 0) {
+        // Moving
+        setIsDeleting(false);
+        setCurrentParagraph((prev) => (prev + 1) % paragraphs.length);
+        setTypingSpeed(200);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [charIndex, isDeleting, currentParagraph, typingSpeed, paragraphs]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
@@ -27,7 +58,12 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 p-8">
             <h1 className="text-3xl font-bold mb-4">Izet Delibasic</h1>
-            <p className="mb-6 h-24">{paragraphs[currentParagraph]}</p>
+            <p className="mb-6 h-24">
+              {displayedText}
+              <span className="border-r-2 border-card-foreground animate-pulse">
+                &nbsp;
+              </span>
+            </p>
             <div className="flex space-x-4">
               <button className="bg-blue-500 text-white px-4 py-2 rounded">
                 <a href="/cv.pdf" download>

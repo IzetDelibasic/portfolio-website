@@ -56,7 +56,7 @@ const HeroSection = () => {
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <div className="max-w-4xl w-full bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden">
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/2 p-8">
+          <div className="md:w-1/2 p-8 text-center">
             <h1 className="text-3xl font-bold mb-4">Izet Delibasic</h1>
             <p className="mb-6 h-24">
               {displayedText}

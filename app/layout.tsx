@@ -8,12 +8,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <head>
+        <link rel="icon" href="/images/favicon.ico" />
+      </head>
+      <body>
+        <>{children}</>
+      </body>
     </html>
   );
 }

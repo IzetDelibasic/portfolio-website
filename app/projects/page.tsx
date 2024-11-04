@@ -1,33 +1,8 @@
+import { projectsConstant } from "@/constants/projectsConstant";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Component() {
-  const projects = [
-    {
-      id: 1,
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with React and Node.js",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      id: 2,
-      title: "Weather App",
-      description: "Real-time weather forecasting using OpenWeatherMap API",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      id: 3,
-      title: "Task Manager",
-      description: "A productivity app built with React and Firebase",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      description: "A responsive portfolio site using Next.js and Tailwind CSS",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -41,7 +16,7 @@ export default function Component() {
           </p>
         </div>
         <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
-          {projects.map((project) => (
+          {projectsConstant.map((project) => (
             <div
               key={project.id}
               className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
@@ -64,9 +39,11 @@ export default function Component() {
                 </p>
               </div>
               <div className="bg-white p-4">
-                <button className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
-                  View Project
-                </button>
+                <Link href={project.href}>
+                  <button className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                    View Project
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

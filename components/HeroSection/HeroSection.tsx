@@ -67,21 +67,23 @@ const HeroSection = () => {
       <div className="relative bg-white max-w-4xl w-full bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden z-10">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 p-8 text-center mt-6">
-            <h1 className="text-3xl font-bold mb-4">Izet Delibasic</h1>
-            <p className="mb-6 h-24">
+            <h1 className="text-3xl font-bold mb-4 font-montserrat mt-10">
+              Izet Delibašić
+            </h1>
+            <p className="mb-6 h-12 font-about">
               {displayedText}
               <span className="border-r-2 border-card-foreground animate-pulse">
                 &nbsp;
               </span>
             </p>
-            <div className="flex items-center justify-center space-x-4 mx-auto">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded">
+            <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 mx-auto">
+              <button className="border border-blue-500 bg-blue-500 text-white mb-2 sm:mb-0 px-4 py-2 rounded w-[65%] sm:w-auto hover:bg-white hover:text-blue-500 ease-in-out duration-300">
                 <a href="/cv.pdf" download>
                   Download CV
                 </a>
               </button>
-              <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded">
-                <Link href="/projects">View Projects</Link>
+              <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded w-[65%] sm:w-auto hover:bg-blue-500 hover:text-white ease-out duration-300">
+                <Link href="/projects">About Me</Link>
               </button>
             </div>
           </div>

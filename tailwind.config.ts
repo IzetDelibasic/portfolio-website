@@ -1,12 +1,31 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        subtitle: "Outfit",
+        title: "Bebas Neue",
+        about: "Work Sans",
+        montserrat: "Montserrat",
+        cabin: "Cabin",
+      },
+      colors: {
+        backgroundColor: "#E6F2F9",
+        blueColor: "#003459",
+        lightBlue: "#007ea7",
+        greenColor: "#32CD32",
+        lightGreen: "#50C878",
+      },
+    },
   },
   plugins: [],
 };
+export default config;

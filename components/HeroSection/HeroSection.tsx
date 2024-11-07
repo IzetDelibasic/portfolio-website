@@ -4,6 +4,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { profileImage } from "@/constants/imagesConstant";
+import { contactConstant } from "@/constants/contactConstant";
 
 const HeroSection = () => {
   const [currentParagraph, setCurrentParagraph] = useState(0);
@@ -70,13 +71,26 @@ const HeroSection = () => {
             <h1 className="text-3xl font-bold mb-4 font-montserrat mt-10">
               Izet Delibašić
             </h1>
-            <p className="mb-6 h-12 font-about">
+            <p className="mb-4 font-about">
               {displayedText}
               <span className="border-r-2 border-card-foreground animate-pulse">
                 &nbsp;
               </span>
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 mx-auto">
+            <div className="flex justify-center items-center mt-4 mb-6">
+              {contactConstant.map((contact, index) => (
+                <a
+                  key={index}
+                  href={contact.href}
+                  className={
+                    index !== 0 ? "ml-[1rem] cursor-pointer" : "cursor-pointer"
+                  }
+                >
+                  <contact.icon size={30} />
+                </a>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 mx-auto font-about">
               <button className="border border-blue-500 bg-blue-500 text-white mb-2 sm:mb-0 px-4 py-2 rounded w-[65%] sm:w-auto hover:bg-white hover:text-blue-500 ease-in-out duration-300">
                 <a href="/cv.pdf" download>
                   Download CV

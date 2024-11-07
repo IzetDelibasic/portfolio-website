@@ -88,7 +88,11 @@ export default function Projects() {
                 </p>
               </div>
               <div className="bg-white p-4">
-                <Link href={project.href}>
+                <Link
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300 font-about">
                     {project.buttonTitle}
                   </button>

@@ -53,8 +53,18 @@ const HeroSection = () => {
   }, [charIndex, isDeleting, currentParagraph, typingSpeed, paragraphs]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      <div className="max-w-4xl w-full bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden">
+    <div
+      className="relative min-h-screen flex items-center justify-center p-4"
+      style={{
+        backgroundImage: "url('/images/backgroundImage.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Blur overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lg"></div>
+
+      <div className="relative bg-white max-w-4xl w-full bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden z-10">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 p-8 text-center mt-6">
             <h1 className="text-3xl font-bold mb-4">Izet Delibasic</h1>

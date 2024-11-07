@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { IoArrowBack } from "react-icons/io5";
 
 export default function Achievements() {
   const [activePath, setActivePath] = useState("");
@@ -14,6 +15,15 @@ export default function Achievements() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <Link
+        href="/"
+        className="self-end flex justify-start items-center group "
+      >
+        <IoArrowBack className="h-4 w-4 mr-1 group-hover:text-blue-500 group-hover:ease-in-out group-hover:duration-300" />
+        <p className="text-sm font-subtitle group-hover:text-blue-500 group-hover:ease-in-out group-hover:duration-300">
+          Home
+        </p>
+      </Link>
       <div className="max-w-7xl mx-auto">
         {/* Navigation Buttons */}
         <div className="flex justify-center space-x-4 mb-8">

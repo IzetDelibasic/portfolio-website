@@ -4,6 +4,7 @@ import { projectsConstant } from "@/constants/projectsConstant";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { IoArrowBack } from "react-icons/io5";
 
 export default function Projects() {
   const [activePath, setActivePath] = useState("");
@@ -16,6 +17,15 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <Link
+        href="/"
+        className="self-end flex justify-start items-center group "
+      >
+        <IoArrowBack className="h-4 w-4 mr-1 group-hover:text-blue-500 group-hover:ease-in-out group-hover:duration-300" />
+        <p className="text-sm font-subtitle group-hover:text-blue-500 group-hover:ease-in-out group-hover:duration-300">
+          Home
+        </p>
+      </Link>
       <div className="max-w-7xl mx-auto">
         {/* Navigation Buttons */}
         <div className="flex justify-center space-x-4 mb-8">
@@ -46,7 +56,7 @@ export default function Projects() {
         {/* Projects Section */}
         <div className="text-center">
           <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            My Projects
+            Projects
           </h1>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
             Here is a selection of my recent work. Each project showcases

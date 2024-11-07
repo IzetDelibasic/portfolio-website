@@ -96,9 +96,11 @@ const HeroSection = () => {
                   Download CV
                 </a>
               </button>
-              <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded w-[65%] sm:w-auto hover:bg-blue-500 hover:text-white ease-out duration-300">
-                <Link href="/projects">About Me</Link>
-              </button>
+              <Link href="/projects">
+                <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded w-[65%] sm:w-auto hover:bg-blue-500 hover:text-white ease-out duration-300">
+                  About Me
+                </button>
+              </Link>
             </div>
           </div>
           <div className="md:w-1/2">

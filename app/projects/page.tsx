@@ -64,7 +64,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+        <div className="mt-12 flex justify-center flex-col gap-5 max-w-lg mx-auto lg:max-w-none lg:w-[45%]">
           {projectsConstant.map((project) => (
             <div
               key={project.id}

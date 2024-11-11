@@ -1,5 +1,6 @@
 "use client";
 
+import { competitionConstant } from "@/constants/competitionConstant";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoArrowBack } from "react-icons/io5";
@@ -50,12 +51,34 @@ export default function Achievements() {
             </button>
           </Link>
         </div>
-        {/* Projects Section */}
+        {/* Experience Section */}
         <div className="text-center">
           <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl font-montserrat">
-            Experience
+            Competitions
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4 font-montserrat"></p>
+          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4 font-montserrat">
+            A showcase of my participation in various hackathons and programming
+            challenges.
+          </p>
+        </div>
+        {/* Achievements List */}
+        <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3">
+          {competitionConstant.map((competition, index) => (
+            <div
+              key={index}
+              className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
+            >
+              <div className="p-6 flex flex-col items-center text-center">
+                <competition.icon className="text-blue-600 h-12 w-12 mb-4" />
+                <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
+                  {competition.competitionTitle}
+                </h2>
+                <p className="mt-3 text-base text-gray-500 font-about">
+                  {competition.competitionDescription}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

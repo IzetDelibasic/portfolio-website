@@ -8,4 +8,4 @@ export const sumathermImage = "/images/sumathermImage.webp";
 
 export const velezProject = "/images/rkVelez.webp";
 
-export const wildescapeImage = "/images/wildescape.webp";
+export const wildescapeImage = "/images/wildescapeImage.webp";

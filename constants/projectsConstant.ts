@@ -14,6 +14,7 @@ export const projectsConstant = [
     imageSrc: sumathermImage,
     href: "https://sumatherm-project.vercel.app/",
     buttonTitle: "View website",
+    technologies: ["next.js", "tailwindcss"],
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ export const projectsConstant = [
     imageSrc: hirefyImage,
     href: "https://hirefy-app.onrender.com/",
     buttonTitle: "View application",
+    technologies: ["react", "nodejs", "mongodb", "express"],
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ export const projectsConstant = [
     imageSrc: wildescapeImage,
     href: "https://www.youtube.com/watch?v=d3SVVpHpS5g",
     buttonTitle: "View trailer",
+    technologies: ["c#", "unity"],
   },
   {
     id: 4,
@@ -41,5 +44,6 @@ export const projectsConstant = [
     image: velezProject,
     href: "https://www.rk-velez.com/",
     buttonTitle: "Website",
+    technologies: ["next.js", "tailwindcss"],
   },
 ];

@@ -71,13 +71,15 @@ export default function Projects() {
               className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
             >
               <div className="flex-shrink-0">
-                <Image
-                  className="h-48 w-full object-cover"
-                  src={project.image}
-                  alt={project.title}
-                  width={300}
-                  height={200}
-                />
+                {project.image && (
+                  <Image
+                    className="h-48 w-full object-cover"
+                    src={project.image}
+                    alt={project.title}
+                    width={300}
+                    height={200}
+                  />
+                )}
               </div>
               <div className="flex-1 p-6 flex flex-col justify-between">
                 <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
@@ -86,6 +88,16 @@ export default function Projects() {
                 <p className="mt-3 text-base text-gray-500 font-about">
                   {project.description}
                 </p>
+                <div className="flex my-2">
+                  {project.technologies.map((tech, index) => (
+                    <p
+                      key={index}
+                      className="px-2 py-1 mx-1 text-xs font-medium bg-gray-200 rounded-full text-gray-600  hover:bg-gradient-to-r hover:from-gray-200 hover:via-blue-200 hover:to-blue-500 hover:text-black ease-in-out duration-300 cursor-default"
+                    >
+                      {tech}
+                    </p>
+                  ))}
+                </div>
               </div>
               <div className="bg-white p-4">
                 <Link

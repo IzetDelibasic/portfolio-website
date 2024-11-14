@@ -57,7 +57,7 @@ export default function Achievements() {
           <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl font-montserrat">
             Competitions
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4 font-montserrat">
+          <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-xl text-gray-500 sm:mt-4 font-montserrat">
             A showcase of my participation in various hackathons and programming
             challenges.
           </p>
@@ -74,7 +74,7 @@ export default function Achievements() {
                 <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
                   {competition.competitionTitle}
                 </h2>
-                <p className="mt-3 text-base text-gray-500 font-about">
+                <p className="mt-3 text-sm sm:text-base text-gray-500 font-about">
                   {competition.competitionDescription}
                 </p>
               </div>
@@ -99,7 +99,7 @@ export default function Achievements() {
                 <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
                   {education.educationTitle}
                 </h2>
-                <p className="mt-3 text-base text-gray-500 font-about">
+                <p className="mt-3 text-sm sm:text-base text-gray-500 font-about">
                   {education.educationDescription}
                 </p>
               </div>

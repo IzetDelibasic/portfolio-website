@@ -58,7 +58,7 @@ export default function Projects() {
           <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl font-montserrat">
             Projects
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4 font-montserrat">
+          <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-xl text-gray-500 sm:mt-4 font-montserrat">
             Here is a selection of my recent work. Each project showcases
             different skills and technologies.
           </p>
@@ -78,17 +78,18 @@ export default function Projects() {
                     alt={project.title}
                     width={300}
                     height={200}
+                    layout="responsive"
                   />
                 )}
               </div>
-              <div className="flex-1 p-6 flex flex-col justify-between">
+              <div className="flex-1 p-6 flex flex-col justify-between text-center md:text-start">
                 <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
                   {project.title}
                 </h2>
-                <p className="mt-3 text-base text-gray-500 font-about">
+                <p className="mt-3 text-sm sm:text-base text-gray-500 font-about">
                   {project.description}
                 </p>
-                <div className="flex my-2">
+                <div className="flex justify-center md:justify-start my-2">
                   {project.technologies.map((tech, index) => (
                     <p
                       key={index}

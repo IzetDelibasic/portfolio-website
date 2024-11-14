@@ -6,7 +6,7 @@ export const educationConstant = [
   {
     educationTitle: "FACULTY OF INFORMATION TECHNOLOGIES",
     educationDescription:
-      "Second-year student at Faculty of Information Techologies - Mostar",
+      "Third-year student at Faculty of Information Techologies - Mostar",
     icon: FaCodePullRequest,
   },
   {

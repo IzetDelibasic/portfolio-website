@@ -53,7 +53,13 @@ export default function Achievements() {
           </Link>
         </div>
         {/* Experience Section */}
-        <div className="text-center">
+        <div
+          className="text-center"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="100"
+          data-aos-offset="0"
+        >
           <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl font-montserrat">
             Competitions
           </h1>
@@ -68,6 +74,8 @@ export default function Achievements() {
             <div
               key={index}
               className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             >
               <div className="p-6 flex flex-col items-center text-center">
                 <competition.icon className="text-blue-600 h-12 w-12 mb-4" />
@@ -81,7 +89,13 @@ export default function Achievements() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-6">
+        <div
+          className="text-center mt-6"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="100"
+          data-aos-offset="0"
+        >
           <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl font-montserrat">
             Education
           </h1>
@@ -93,6 +107,8 @@ export default function Achievements() {
             <div
               key={index}
               className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             >
               <div className="p-6 flex flex-col items-center text-center">
                 <education.icon className="text-blue-600 h-12 w-12 mb-4" />

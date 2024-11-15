@@ -54,7 +54,13 @@ export default function Projects() {
         </div>
 
         {/* Projects Section */}
-        <div className="text-center">
+        <div
+          className="text-center"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="100"
+          data-aos-offset="0"
+        >
           <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl font-montserrat">
             Projects
           </h1>
@@ -69,6 +75,8 @@ export default function Projects() {
             <div
               key={project.id}
               className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             >
               <div className="flex-shrink-0">
                 {project.image && (

@@ -3,7 +3,11 @@ import "./globals.css";
 import AOSProvider from "@/components/AosProvider/AosProvider";
 
 export const metadata: Metadata = {
-  title: "Izet Delibašić | Web Developer & Software Engineering Student",
+  title: {
+    default: "Izet Delibašić | Web Developer & Software Engineering Student",
+    template:
+      "%s - Izet Delibašić | Web Developer & Software Engineering Student",
+  },
 };
 
 export default function RootLayout({

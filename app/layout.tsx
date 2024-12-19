@@ -4,9 +4,33 @@ import AOSProvider from "@/components/AosProvider/AosProvider";
 
 export const metadata: Metadata = {
   title: {
-    default: "Izet Delibašić | Web Developer & Software Engineering Student",
+    default: "Izet Delibasic | Web Developer | Software Engineering Student",
     template:
-      "%s - Izet Delibašić | Web Developer & Software Engineering Student",
+      "%s - Izet Delibasic | Web Developer | Software Engineering Student",
+  },
+  description:
+    "Izet Delibašić, a software engineering student with the ambition to become a full-stack developer.",
+  openGraph: {
+    title: {
+      default: "Izet Delibasic | Web Developer | Software Engineering Student",
+      template:
+        "%s - Izet Delibasic | Web Developer | Software Engineering Student",
+    },
+    description:
+      "Izet Delibašić, a software engineering student with the ambition to become a full-stack developer.",
+
+    images: [
+      {
+        url: "/images/profileImage.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Izet Delibasic",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/velezWallpaper.webp"],
   },
 };
 

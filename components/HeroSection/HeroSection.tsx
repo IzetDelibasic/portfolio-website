@@ -94,8 +94,11 @@ const HeroSection = () => {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 mx-auto font-about">
               <button className="border border-blue-500 bg-blue-500 text-white text-sm sm:text-base mb-2 sm:mb-0 px-4 py-2 rounded w-[65%] sm:w-auto hover:bg-white hover:text-blue-500 ease-in-out duration-300">
-                <a href="/Izet Delibasic - Curriculum Vitae.pdf" download>
-                  Download CV
+                <a
+                  href="/Izet Delibasic - Curriculum Vitae.pdf"
+                  target="_blank"
+                >
+                  Open CV
                 </a>
               </button>
               <Link

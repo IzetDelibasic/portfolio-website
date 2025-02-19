@@ -68,7 +68,7 @@ export default function Achievements() {
             challenges.
           </p>
         </div>
-        {/* Education List */}
+        {/* Competitions List */}
         <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3">
           {competitionConstant.map((competition, index) =>
             competition.href ? (

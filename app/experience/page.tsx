@@ -68,26 +68,48 @@ export default function Achievements() {
             challenges.
           </p>
         </div>
-        {/* Achievements List */}
+        {/* Education List */}
         <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3">
-          {competitionConstant.map((competition, index) => (
-            <div
-              key={index}
-              className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div className="p-6 flex flex-col items-center text-center">
-                <competition.icon className="text-blue-600 h-12 w-12 mb-4" />
-                <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
-                  {competition.competitionTitle}
-                </h2>
-                <p className="mt-3 text-sm sm:text-base text-gray-500 font-about">
-                  {competition.competitionDescription}
-                </p>
+          {competitionConstant.map((competition, index) =>
+            competition.href ? (
+              <a
+                key={index}
+                href={competition.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div className="p-6 flex flex-col items-center text-center">
+                  <competition.icon className="text-blue-600 h-12 w-12 mb-4" />
+                  <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
+                    {competition.competitionTitle}
+                  </h2>
+                  <p className="mt-3 text-sm sm:text-base text-gray-500 font-about">
+                    {competition.competitionDescription}
+                  </p>
+                </div>
+              </a>
+            ) : (
+              <div
+                key={index}
+                className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white opacity-50 cursor-default"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div className="p-6 flex flex-col items-center text-center">
+                  <competition.icon className="text-blue-600 h-12 w-12 mb-4" />
+                  <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
+                    {competition.competitionTitle}
+                  </h2>
+                  <p className="mt-3 text-sm sm:text-base text-gray-500 font-about">
+                    {competition.competitionDescription}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
         <div
           className="text-center mt-6"
@@ -103,24 +125,46 @@ export default function Achievements() {
         </div>
         {/* Education List */}
         <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3">
-          {educationConstant.map((education, index) => (
-            <div
-              key={index}
-              className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div className="p-6 flex flex-col items-center text-center">
-                <education.icon className="text-blue-600 h-12 w-12 mb-4" />
-                <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
-                  {education.educationTitle}
-                </h2>
-                <p className="mt-3 text-sm sm:text-base text-gray-500 font-about">
-                  {education.educationDescription}
-                </p>
+          {educationConstant.map((education, index) =>
+            education.href ? (
+              <a
+                key={index}
+                href={education.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div className="p-6 flex flex-col items-center text-center">
+                  <education.icon className="text-blue-600 h-12 w-12 mb-4" />
+                  <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
+                    {education.educationTitle}
+                  </h2>
+                  <p className="mt-3 text-sm sm:text-base text-gray-500 font-about">
+                    {education.educationDescription}
+                  </p>
+                </div>
+              </a>
+            ) : (
+              <div
+                key={index}
+                className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white opacity-50 cursor-default"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div className="p-6 flex flex-col items-center text-center">
+                  <education.icon className="text-blue-600 h-12 w-12 mb-4" />
+                  <h2 className="text-xl font-semibold text-gray-900 font-montserrat">
+                    {education.educationTitle}
+                  </h2>
+                  <p className="mt-3 text-sm sm:text-base text-gray-500 font-about">
+                    {education.educationDescription}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     </div>

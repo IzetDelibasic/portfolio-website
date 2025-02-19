@@ -2,6 +2,7 @@ import { FaCodePullRequest } from "react-icons/fa6";
 import { DiNodejsSmall } from "react-icons/di";
 import { DiJsBadge } from "react-icons/di";
 import { DiAngularSimple } from "react-icons/di";
+import { SiPostgresql } from "react-icons/si";
 
 export const educationConstant = [
   {
@@ -29,5 +30,12 @@ export const educationConstant = [
       "Building full-stack application using Angular and ASP.NET Core REST API - Udemy Course",
     href: "https://udemy-certificate.s3.amazonaws.com/image/UC-d6585be5-9004-4601-8e59-174fb3c4dd9e.jpg?v=1736716049000",
     icon: DiAngularSimple,
+  },
+  {
+    educationTitle: "The Complete SQL Bootcamp: Go from Zero to Hero",
+    educationDescription:
+      "The Complete SQL Bootcamp: Go from Zero to Hero - Udemy Course covering SQL fundamentals, database management, querying, and data manipulation using PostgreSQL",
+    href: "https://udemy-certificate.s3.amazonaws.com/image/UC-ff6bf4ed-fd71-4de0-becb-e3e9c5cba770.jpg?v=1739543749000",
+    icon: SiPostgresql,
   },
 ];
